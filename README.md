@@ -1,6 +1,6 @@
 # Téléchargeur de Vidéos
 
-![Logo](image.png)
+![Logo](assets/image.png)
 
 ## Description
 Cette application permet de télécharger des vidéos depuis une URL spécifiée et de les enregistrer sous un nom de fichier spécifié.
