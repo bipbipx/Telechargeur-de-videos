@@ -86,7 +86,7 @@ def browse_output():
     output_entry.insert(0, file_path)
 
 def show_about():
-    messagebox.showinfo("À propos", "Téléchargeur de vidéos v1.0\nDéveloppé par Bipbipx")
+    messagebox.showinfo("À propos", "Téléchargeur de vidéos v1.0\nDéveloppé par [Votre Nom]")
 
 def quit_app():
     app.quit()
