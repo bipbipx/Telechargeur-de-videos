@@ -28,7 +28,7 @@ class TextRedirector:
         pass
 
 def load_language(lang_code):
-    with open(f"languages/{lang_code}.json", "r", encoding="utf-8") as file:
+    with open(resource_path(f"languages/{lang_code}.json"), "r", encoding="utf-8") as file:
         return json.load(file)
 
 def set_language(lang_code):
@@ -228,12 +228,12 @@ def load_queue():
 
 def save_history():
     history = history_list.get(0, tk.END)
-    with open("history.json", 'w') as f:
+    with open(resource_path("history.json"), 'w') as f:
         json.dump(history, f)
 
 def load_history():
-    if os.path.exists("history.json"):
-        with open("history.json", 'r') as f:
+    if os.path.exists(resource_path("history.json")):
+        with open(resource_path("history.json"), 'r') as f:
             history = json.load(f)
         for item in history:
             history_list.insert(tk.END, item)
