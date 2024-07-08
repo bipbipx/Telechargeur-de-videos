@@ -32,18 +32,6 @@ def validate_url(url):
 def validate_output_filename(filename):
     return len(filename.strip()) > 0
 
-def progress_hook(d):
-    if d['status'] == 'downloading':
-        p = d['_percent_str']
-        p = p.replace('%', '')
-        progress_var.set(float(p))
-        progress_label.config(text=f"Téléchargement : {p}%")
-        app.update_idletasks()
-    elif d['status'] == 'finished':
-        progress_var.set(100)
-        progress_label.config(text="Téléchargement : 100%")
-        app.update_idletasks()
-
 def resize_image(image_path, max_size):
     if not os.path.exists(image_path):
         messagebox.showerror("Erreur", f"Le fichier image {image_path} n'existe pas.")

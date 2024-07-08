@@ -241,8 +241,7 @@ class VideoDownloaderApp:
                    self.schedule_label, self.url_entry, self.output_entry,
                    self.url_entry_tooltip, self.output_entry_tooltip, self.log_label,
                    self.history_label, self.search_entry, self.history_list,
-                   self.status_label, self.log_text, self.input_frame,
-                   log_history_frame, log_frame, history_frame]  # Correction des références
+                   self.status_label, self.log_text, self.input_frame]  # Correction des références
         for widget in widgets:
             widget.configure(bg=bg, fg=fg)
         self.url_entry.configure(insertbackground=fg)
